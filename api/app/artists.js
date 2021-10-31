@@ -3,7 +3,6 @@ const multer = require('multer');
 const path = require('path');
 const {nanoid} = require('nanoid');
 
-
 const Artist = require('../models/Artist');
 const config = require('../config');
 
