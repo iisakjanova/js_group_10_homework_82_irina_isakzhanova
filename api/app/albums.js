@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
     try {
         const query = {};
 
-        if(req.query.artist) {
+        if (req.query.artist) {
            query.artist = req.query.artist;
         }
 
@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const album = await Album.findById(req.params.id).populate('artist', 'title');
+        const album = await Album.findById(req.params.id).populate('artist', 'title image info');
 
         if (album) {
             res.send(album);
